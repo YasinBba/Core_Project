@@ -5,17 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-
 namespace EntityLayer.Concrete
 {
-    public class Experience
+    public class Contact
     {
         [Key]
-        public string ExperienceId { get; set; }
-        public string Name { get; set; }
-        public string Date { get; set; }
-        public string ImageUrl { get; set; }
+        public int ContactId { get; set; }
+        public string Title { get; set; }
         public string Description { get; set; }
-
+        public string Mail { get; set; }
+        public string Phone { get; set; }
     }
 }
