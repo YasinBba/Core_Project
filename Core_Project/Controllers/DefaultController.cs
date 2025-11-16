@@ -2,7 +2,7 @@
 
 namespace Core_Project.Controllers
 {
-    public class DefaulController : Controller
+    public class DefaultController : Controller
     {
         public IActionResult Index()
         {
