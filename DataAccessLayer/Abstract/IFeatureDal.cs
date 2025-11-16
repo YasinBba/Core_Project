@@ -1,13 +1,17 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccessLayer.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer.Abstract;
+
+using EntityLayer.Concrete;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IContectDal:IGenericDal<Contact>
+    public interface IFeatureDal:IGenericDal<Feature>
+
     {
     }
 }

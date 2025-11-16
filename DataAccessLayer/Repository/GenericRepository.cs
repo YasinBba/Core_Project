@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using Microsoft.AspNetCore.SignalR.Protocol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,22 +22,30 @@ namespace DataAccessLayer.Repository
 
         public T GetByID(int id)
         {
-            throw new NotImplementedException();
+
+            using var c = new Context();
+            return c.Set<T>().Find(id);
+
         }
 
         public List<T> GetList()
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            return c.Set<T>().ToList();
         }
 
         public void Insert(T t)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            c.Add(t);
+            c.SaveChanges();
         }
 
         public void Update(T t)
         {
-            throw new NotImplementedException();
+            using var c = new Context();
+            c.Update(t);
+            c.SaveChanges();
         }
     }
 }
