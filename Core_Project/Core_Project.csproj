@@ -21,15 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="BusinessLayer">
-      <HintPath>..\BusinessLayer\bin\Debug\net9.0\BusinessLayer.dll</HintPath>
-    </Reference>
-    <Reference Include="DataAccessLayer">
-      <HintPath>..\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityLayer">
-      <HintPath>..\DataAccessLayer\bin\Debug\net9.0\EntityLayer.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
   </ItemGroup>
+
+	
+	
 
 </Project>
